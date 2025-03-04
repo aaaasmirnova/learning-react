@@ -1,0 +1,47 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.slider-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.slider-button {
+  width: 40px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.slider-button:disabled {
+  cursor: not-allowed;
+}
+
+.slider-button:hover {
+  background-color: rgb(148, 146, 146);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.slider-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+}
+
+.slider-dot:hover {
+  background-color: rgb(148, 146, 146);
+}
+
+.active-slider-dot {
+  background-color: rgb(233, 107, 107);
+}
