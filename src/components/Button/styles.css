@@ -1,0 +1,21 @@
+.button {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+}
+
+.hasUpperCaseText {
+  text-transform: uppercase;
+}
+
+.hasBorderRadius {
+  border-radius: 8px;
+}
+
+.hasBorder {
+  border: 1px solid black;
+}
+
+.button:disabled {
+  opacity: 0.5;
+}
