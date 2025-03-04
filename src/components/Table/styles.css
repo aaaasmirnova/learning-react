@@ -1,0 +1,14 @@
+.table_style {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+.thead_style {
+  font-size: 18px;
+}
+
+.td_style {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid grey;
+}
