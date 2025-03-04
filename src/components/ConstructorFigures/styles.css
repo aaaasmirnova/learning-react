@@ -1,0 +1,79 @@
+.constructor-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.constructor-data {
+  width: 350px;
+  height: 180px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.constructor-title {
+  font-size: 24px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.buttons-color-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttons-color-wrapper .activeButton,
+.buttons-figure-wrapper .activeButton {
+  background-color: rgb(235, 96, 96);
+  border: 2px solid rgb(205, 44, 44);
+}
+
+.buttons-figure-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.buttons-color-wrapper button,
+.buttons-figure-wrapper button {
+  width: 90px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 7px;
+}
+
+.constructor-result {
+  font-size: 24px;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: rgb(216, 84, 84);
+}
+
+.yellow {
+  background-color: rgb(244, 244, 136);
+}
+
+.blue {
+  background-color: rgb(50, 50, 228);
+}
