@@ -1,0 +1,73 @@
+.cards-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.user-card {
+  position: relative;
+  width: 250px;
+  height: 370px;
+  border: 2px solid #538bec;
+  border-radius: 20px;
+  color: #42aaff;
+}
+
+.user-card--online {
+  background-color: #d0f0c0;
+  border: 2px solid #008000;
+}
+
+.photo-wrapper {
+  width: 103px;
+  height: 103px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #538bec;
+  border-radius: 50%;
+}
+
+.letter {
+  padding-top: 5px;
+  font-size: 76px;
+  text-align: center;
+}
+
+.photo img {
+  border-radius: 50%;
+}
+
+.status {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.offline-theme {
+  color: grey;
+}
+
+.online-theme {
+  color: #008000;
+}
+
+.name {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 50px;
+}
+
+.child-info {
+  padding-left: 10px;
+}
+
+.child-info:not(:last-child) {
+  margin-bottom: 5px;
+}
