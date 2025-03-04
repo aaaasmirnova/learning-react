@@ -1,0 +1,103 @@
+.pizza-wrapper {
+  width: 550px;
+}
+.pizza-catalog {
+  position: relative;
+  display: flex;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.pizza-catalog::after {
+  content: "";
+  position: absolute;
+  top: 205px;
+  width: 100%;
+  border: 1px solid rgb(239, 165, 28);
+}
+
+.pizza-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  padding: 20px;
+  border: 2px solid rgb(41, 114, 223);
+}
+
+.add-pizza {
+  padding: 5px;
+  border: 1px solid rgb(239, 165, 28);
+  background-color: rgb(246, 200, 113);
+}
+
+.add-pizza:hover {
+  background-color: rgb(244, 185, 76);
+}
+
+.pizza-name {
+  font-size: 24px;
+  margin-bottom: 50px;
+  color: rgb(41, 114, 223);
+}
+
+.pizza-name-cart {
+  margin-bottom: 0;
+}
+
+.pizza-price {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: rgb(41, 114, 223);
+}
+
+.cart-pizza-wrapper {
+  height: 50px;
+  border: 2px solid rgb(36, 170, 36);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cart-pizza-inner-wrapper {
+  display: grid;
+  grid-template-columns: 200px 240px 80px;
+  padding: 10px;
+}
+
+.pizza-one-price {
+  font-size: 18px;
+  color: rgb(36, 170, 36);
+  margin-left: auto;
+}
+
+.pizza-price-total {
+  width: 150px;
+  font-size: 40px;
+  margin-left: auto;
+  border: 2px solid rgb(230, 52, 52);
+  color: rgb(36, 170, 36);
+  text-align: center;
+}
+
+.change-count-pizza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid rgb(230, 52, 52);
+  border-radius: 5px;
+}
+
+.change-count-pizza-card-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.change-count-pizza-cart-wrapper {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
