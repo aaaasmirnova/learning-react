@@ -1,0 +1,46 @@
+.users-wrapper {
+  width: 500px;
+}
+
+.city-buttons-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.city-button {
+  width: 130px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(200, 229, 250);
+  border: 2px solid rgb(97, 168, 218);
+  border-radius: 5px;
+}
+
+.city-button-active {
+  background-color: rgb(84, 165, 223);
+}
+
+.users-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.users-info-wrapper p {
+  font-size: 18px;
+  color: rgb(27, 127, 27);
+}
+
+.users-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 2px solid rgb(85, 164, 85);
+  border-radius: 5px;
+  background-color: rgb(173, 242, 173);
+}
+
+.inactive-user {
+  opacity: 50%;
+}
