@@ -1,0 +1,102 @@
+.vacancy-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vacancy-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 120px;
+  background-color: white;
+  box-shadow: 0px 5px 10px 0px rgba(139, 192, 193, 0.5);
+}
+
+.company-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.company-info {
+  display: flex;
+  gap: 10px;
+}
+
+.company {
+  font-weight: 700;
+  color: #1db593;
+}
+
+.new {
+  padding: 4px 7px;
+  margin-top: -2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  background-color: #1db593;
+  border-radius: 15px;
+}
+
+.featured {
+  padding: 4px 7px;
+  margin-top: -2px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.position {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.working-conditions-info {
+  display: flex;
+  gap: 20px;
+}
+
+.working-conditions-description {
+  position: relative;
+  color: #a9a9a9;
+}
+
+.working-conditions-description:not(:last-child):after {
+  position: absolute;
+  content: "·";
+  left: calc(100% + 10px);
+}
+
+.languages-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.tools-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.tools-list-insivible {
+  display: none;
+}
+
+.skills {
+  display: flex;
+  gap: 10px;
+  margin-right: 30px;
+}
+
+.skills-style {
+  padding: 5px;
+  font-weight: 700;
+  color: #1db593;
+  background-color: #dffbf4;
+}
