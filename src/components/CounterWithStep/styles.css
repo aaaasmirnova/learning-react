@@ -1,0 +1,49 @@
+.counter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 250px;
+  height: 200px;
+  border: 1px solid rgb(211, 208, 208);
+}
+
+.counter-display-wrapper {
+  border-bottom: 1px solid grey;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.count {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.step-display-wrapper {
+  border-top: 1px solid grey;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.steps-container {
+  margin-top: 15px;
+}
+
+.step-changing {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.activeStep {
+  background-color: rgb(234, 118, 118);
+  border: 2px solid red;
+  border-radius: 10%;
+}
+
+.activeButton {
+  background-color: yellow;
+}
