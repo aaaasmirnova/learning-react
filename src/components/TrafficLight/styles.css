@@ -1,0 +1,43 @@
+/* .traffic-light-wrapper {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 50px;
+  height: 120px;
+  background-color: black;
+  border-radius: 10px;
+  list-style: none;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+
+.changing-color {
+  padding: 10px 5px;
+  background-color: rgb(206, 176, 176);
+} */
