@@ -1,0 +1,69 @@
+.select-checkbox-wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.checkbox-container-inside {
+  display: flex;
+  gap: 20px;
+}
+.checkbox-container {
+  position: relative;
+  /* display: block; */
+}
+
+.checkbox-container input {
+    appearance: none;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /* margin-left: -15px; */
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 50%; /
+}
+
+.active-checkmark {
+    border: 3px solid #ffffff;
+}
+
+.list-figures-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 500px;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+}
