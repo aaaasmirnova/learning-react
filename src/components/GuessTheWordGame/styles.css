@@ -1,0 +1,62 @@
+.word-game-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+}
+
+.word-wrapper {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.letter-button {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(238, 181, 75);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.shown-letter-button {
+  background-color: rgb(245, 160, 1);
+  border: none;
+  color: white;
+}
+
+.word-description {
+  width: 400px;
+  font-size: 16px;
+  color: rgb(42, 102, 152);
+}
+
+.word-game-buttons-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.word-game-button {
+  width: 180px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 2px solid rgb(76, 133, 179);
+  color: rgb(76, 133, 179);
+  background-color: white;
+}
+
+.word-game-button:hover {
+  background-color: rgb(210, 233, 251);
+}
+
+.word-game-answer-button {
+  border: 2px solid orange;
+  color: rgb(243, 166, 10);
+}
+
+.word-game-answer-button:hover {
+  background-color: rgb(244, 223, 184);
+}
