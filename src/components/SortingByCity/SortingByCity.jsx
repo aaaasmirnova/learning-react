@@ -2,7 +2,6 @@ import { useState } from "react";
 import { users } from "./data";
 import "./styles.css";
 export const SortingByCity = () => {
-  const [usersCity, setUsersCity] = useState([]);
   const [activeButton, setActiveButton] = useState(null);
 
   const getCities = () => {
@@ -13,8 +12,13 @@ export const SortingByCity = () => {
 
   const cities = getCities();
 
+  const getUsers = () => {
+    return users.filter((user) => user.city === activeButton);
+  };
+
+  const usersCity = getUsers();
+
   const getSortedByCityList = (city) => {
-    setUsersCity(users.filter((elem) => elem.city === city));
     setActiveButton(city);
   };
 
