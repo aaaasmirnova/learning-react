@@ -16,7 +16,8 @@ export const ToDoList = () => {
     setSearchValue(event.target.value);
   };
 
-  const addValueToList = () => {
+  const addValueToList = (event) => {
+    event.preventDefault();
     const id = list.length !== 0 ? list[list.length - 1].id + 1 : 1;
     setList([...list, { id, text: value, check: false }]);
 
@@ -64,26 +65,22 @@ export const ToDoList = () => {
     if (sort === "checked") {
       return [...newList].sort((a, b) => b.check - a.check);
     }
-    if (sort === "id") {
-      return newList;
-    }
+    return newList;
   };
 
   //   const sortedList = getSortedList();
 
   const getList = () => {
-    let newList = [...list];
+    let initialList = [...list];
     if (searchValue) {
-      newList = getFilteredList();
+      initialList = getFilteredList();
     }
     if (sort) {
-      newList = getSortedList(newList);
+      initialList = getSortedList(initialList);
     }
 
-    return newList;
+    return initialList;
   };
-
-  //   console.log(getList());
 
   return (
     <div className="todolist-wrapper">
