@@ -1,0 +1,50 @@
+.category-buttons-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.category-button {
+  width: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 2px dashed rgb(10, 192, 10);
+  color: rgb(10, 192, 10);
+}
+
+.active-category-button {
+  border: 2px dashed rgb(25, 112, 205);
+  color: rgb(25, 112, 205);
+}
+
+.todo-category-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  height: 30px;
+}
+
+.todo-category-form input {
+  width: 210px;
+  border: 2px solid rgb(241, 97, 97);
+  border-radius: 5px;
+}
+
+.add-todo-button {
+  width: 100px;
+  border: 2px solid rgb(241, 97, 97);
+  color: rgb(241, 97, 97);
+  border-radius: 5px;
+  background-color: rgb(234, 170, 170);
+}
+
+.add-todo-button:hover {
+  background-color: rgb(231, 125, 125);
+}
+
+.checkbox-todo-wrapper {
+  display: flex;
+}
+
+.todo-text {
+  color: rgb(25, 112, 205);
+}
