@@ -1,0 +1,46 @@
+.rental-calculator-title {
+  color: rgb(91, 144, 243);
+  margin-bottom: 20px;
+}
+
+.base-rental-price {
+  color: rgb(89, 203, 89);
+}
+
+.rental-calculator-text {
+  color: rgb(91, 144, 243);
+}
+
+.radio-group-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.radio-item-wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.number-people-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 160px;
+  margin-top: 10px;
+}
+
+.number-people-button {
+  width: 70px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: rgb(195, 210, 237);
+  color: rgb(91, 144, 243);
+  border: 2px solid rgb(91, 144, 243);
+  border-radius: 5px;
+}
+
+.active-number-people-button {
+  background-color: rgb(136, 165, 218);
+}
