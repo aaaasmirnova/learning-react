@@ -1,0 +1,40 @@
+.checked-users-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.checkbox-user-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checked-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checked-list-text {
+  color: rgb(187, 83, 83);
+}
+
+.checkbox-user {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.checkbox-user::after {
+  position: absolute;
+  content: "";
+  left: 115px;
+  top: -10px;
+  height: 40px;
+  width: 3px;
+  background-color: rgb(187, 83, 83);
+}
+
+.users-list-text {
+  color: rgb(71, 112, 177);
+}
