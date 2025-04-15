@@ -1,5 +1,21 @@
 import { useState } from "react";
 import "./styles.css";
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const icons = [
+  "⏰",
+  "🎰",
+  "🎸",
+  "🥁",
+  "🏀",
+  "🚗",
+  "🚬",
+  "🛍",
+  "🎁",
+  "📕",
+  "🍔",
+  "⚰️",
+  "🛏",
+];
 
 export const ExpenseCalculator = () => {
   const [nameCategory, setNameCategory] = useState("");
@@ -7,34 +23,24 @@ export const ExpenseCalculator = () => {
   const [activeIcon, setActiveIcon] = useState(false);
   const [showIcons, setShowIcons] = useState(false);
   const [activeCategory, setActiveCategory] = useState();
-  const [activeNumbers, setActiveNumbers] = useState([]);
+  const [activeNumbers, setActiveNumbers] = useState("");
 
-  const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  const icons = [
-    "⏰",
-    "🎰",
-    "🎸",
-    "🥁",
-    "🏀",
-    "🚗",
-    "🚬",
-    "🛍",
-    "🎁",
-    "📕",
-    "🍔",
-    "⚰️",
-    "🛏",
-  ];
-
-  const getNameCategory = (event) => {
+  const changeNameCategory = (event) => {
     setNameCategory(event.target.value);
   };
 
   const addNewCategory = () => {
+    if (
+      nameCategory.trim() === "" ||
+      categories.find((elem) => elem.category === nameCategory)
+    )
+      return;
+
     setCategories([
       ...categories,
       { category: nameCategory, icon: activeIcon, expense: 0 },
     ]);
+
     if (!activeCategory) {
       setActiveCategory(nameCategory);
     }
@@ -61,49 +67,32 @@ export const ExpenseCalculator = () => {
   };
 
   const addNumber = (number) => {
-    setActiveNumbers([...activeNumbers, number]);
+    setActiveNumbers(activeNumbers + number);
   };
-
-  const getOneExpense = () => {
-    let expense = "";
-    for (let number of activeNumbers) {
-      expense += number;
-    }
-    return Number(expense);
-  };
-
-  let expense = getOneExpense();
 
   const addExpense = () => {
     setCategories(
       categories.map((category) =>
         category.category === activeCategory
-          ? { ...category, expense: category.expense + getOneExpense() }
+          ? { ...category, expense: category.expense + activeNumbers }
           : category
       )
     );
+    setActiveNumbers("");
   };
 
   const clearExpense = () => {
-    setActiveNumbers([]);
+    setActiveNumbers("");
   };
-  console.log(categories);
-  //   console.log(activeIcon);
-  console.log(activeCategory);
-  //   console.log(activeNumber);
-  //   console.log(activeNumbers);
-  //   console.log(getOneExpense());
 
   return (
     <div className="expense-calculator-wrapper">
       <h1 className="expense-calculator-title">Приложение по учету расходов</h1>
-      {categories.length > 0
-        ? categories.map((elem) => (
-            <p className="category-info">
-              {elem.icon} {elem.category} {elem.expense} рублей
-            </p>
-          ))
-        : ""}
+      {categories.map((elem) => (
+        <p className="category-info">
+          {elem.icon} {elem.category} {elem.expense} рублей
+        </p>
+      ))}
       <h2 className="expense-calculator-title-second">Добавить категорию:</h2>
       {activeIcon && <p>Выбранная иконк: {activeIcon}</p>}
       <div className="adding-category-wrapper">
@@ -113,8 +102,8 @@ export const ExpenseCalculator = () => {
             type="text"
             id="category"
             value={nameCategory}
-            onChange={getNameCategory}
-          ></input>
+            onChange={changeNameCategory}
+          />
         </div>
         {showIcons ? (
           <div className="icons-wrapper">
@@ -147,7 +136,7 @@ export const ExpenseCalculator = () => {
           <option value={elem.category}>{elem.category}</option>
         ))}
       </select>
-      <p>{expense} рублей</p>
+      <p>{activeNumbers} рублей</p>
       <div className="calculator-wrapper">
         {numbers.map((number) => (
           <button
