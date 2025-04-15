@@ -24,25 +24,20 @@ export const GuessTheWordGame = () => {
   return (
     <div className="word-game-wrapper">
       <div className="word-wrapper">
-        {words[activeIndex].hidden.split("").map((letter, index) => (
-          <button
-            className={`letter-button ${
-              letter !== "_" ? "shown-letter-button" : ""
-            }`}
-          >
-            {letter !== "_"
-              ? letter
-              : letter === "_" && isVisibleAnswer
-              ? words[activeIndex].word[index]
-              : ""}
-          </button>
-        ))}
+        {words[activeIndex][isVisibleAnswer ? "word" : "hidden"]
+          .split("")
+          .map((letter, index) => (
+            <button
+              key={index}
+              className={`letter-button ${
+                letter !== "_" ? "shown-letter-button" : ""
+              }`}
+            >
+              {letter == "_" ? "" : letter}
+            </button>
+          ))}
       </div>
-      {words.map((elem, index) => (
-        <p className="word-description">
-          {index === activeIndex ? elem.description : ""}
-        </p>
-      ))}
+      <p className="word-description">{words[activeIndex].description}</p>
       <div className="word-game-buttons-wrapper">
         <button
           className="word-game-button word-game-answer-button"
