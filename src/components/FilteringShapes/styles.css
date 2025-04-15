@@ -1,0 +1,45 @@
+.figures-wrapper {
+  width: 500px;
+}
+
+.figures-checkbox-radio-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.block {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+}
+
+.yellow {
+  background-color: #f6f606;
+}
+
+.green {
+  background-color: #26f606;
+}
+
+.red {
+  background-color: #f70509;
+}
+
+.blue {
+  background-color: #098af4;
+}
+
+.dark {
+  filter: brightness(70%);
+}
