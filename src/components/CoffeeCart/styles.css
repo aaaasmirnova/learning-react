@@ -1,0 +1,142 @@
+.coffee-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.coffee-cards-wrapper {
+  display: flex;
+  gap: 50px;
+  width: 1000px;
+  justify-content: center;
+}
+
+.coffee-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  width: 300px;
+  padding: 20px;
+  background-color: rgb(252, 252, 173);
+  border-radius: 15px;
+  border: 2px solid grey;
+}
+
+.coffee-name {
+  color: rgb(48, 168, 199);
+}
+
+.coffee-volume {
+  padding: 5px;
+  color: rgb(24, 132, 159);
+  border: 1px solid rgb(24, 132, 159);
+  border-radius: 5px;
+}
+
+.coffee-syrop-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  color: rgb(24, 132, 159);
+  border: 1px solid rgb(24, 132, 159);
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.active-syrop-button {
+  color: red;
+  border: 1px solid red;
+}
+
+.sugar-checkbox {
+  display: flex;
+  gap: 10px;
+  text-transform: uppercase;
+  color: rgb(235, 166, 38);
+}
+
+.add-coffee-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid rgb(70, 170, 70);
+  color: rgb(70, 170, 70);
+  text-transform: uppercase;
+}
+
+.cart-title {
+  position: relative;
+
+  color: red;
+  text-transform: uppercase;
+  /* text-align: center; */
+  margin-top: 30px;
+}
+
+.cart-title::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: -450px;
+  width: 1000px;
+  height: 2px;
+  background-color: red;
+}
+
+.change-count-coffee-card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coffee-count {
+  color: rgb(24, 132, 159);
+}
+
+.change-count-coffee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid rgb(230, 52, 52);
+  border-radius: 5px;
+}
+
+.increase-count-coffee {
+  border: 2px solid green;
+}
+
+.coffee-cart-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.coffee-in-cart {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.change-count-coffee-cart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.coffee-info-cart {
+  color: rgb(24, 132, 159);
+}
+
+.total-coffee-price {
+  text-transform: uppercase;
+  color: red;
+  margin-left: auto;
+  padding-right: 20px;
+}
