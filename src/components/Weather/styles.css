@@ -1,0 +1,67 @@
+.weather-app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: rgb(250, 226, 182);
+}
+
+.weather-app-inner-wrapper {
+  padding: 20px;
+}
+
+/* .weather-form input {
+bo
+} */
+
+.weather-title {
+  margin-bottom: 10px;
+}
+
+.weather-forecast-wrapper {
+  display: flex;
+  margin-top: 20px;
+  background-color: rgb(91, 225, 243);
+  border: 2px solid orange;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.weather-city-info {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(200, 131, 3);
+  margin-bottom: 10px;
+}
+
+.weather-humidity-info {
+  margin-bottom: 5px;
+}
+
+.weather-humidity-result,
+.weather-wind-result {
+  font-weight: 700;
+  color: rgb(200, 131, 3);
+}
+
+.weather-temperature-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-icon {
+  width: 50px;
+}
+
+.weather-temperature {
+  margin-top: auto;
+  font-size: 24px;
+  color: blue;
+}
+
+.weather-send-button {
+  color: white;
+  background-color: orange;
+  border: none;
+  padding: 2px 5px;
+}
