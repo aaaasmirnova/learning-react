@@ -140,3 +140,7 @@
   margin-left: auto;
   padding-right: 20px;
 }
+
+.empty-cart {
+  color: rgb(24, 132, 159);
+}

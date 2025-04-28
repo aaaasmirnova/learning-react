@@ -32,13 +32,21 @@ export const CoffeeCart = () => {
     return cart.reduce((sum, elem) => sum + elem.count * elem.price, 0);
   };
 
+  const totalPrice = getTotalCartPrice();
+
   console.log(cart);
 
   return (
     <div className="coffee-wrapper">
       <div className="coffee-cards-wrapper">
         {items.map((item) => (
-          <CoffeeItem item={item} cart={cart} setCart={setCart} />
+          <CoffeeItem
+            item={item}
+            cart={cart}
+            setCart={setCart}
+            increaseCount={increaseCount}
+            decreaseCount={decreaseCount}
+          />
         ))}
       </div>
       <h2 className="cart-title">Корзина</h2>
@@ -75,7 +83,10 @@ export const CoffeeCart = () => {
             </div>
           </div>
         ))}
-        <p className="total-coffee-price">Всего {getTotalCartPrice()} р</p>
+        <span className="empty-cart">
+          {cart.length === 0 ? "Вы не добавили ни одного товара" : ""}{" "}
+        </span>
+        <p className="total-coffee-price">Всего {totalPrice} р</p>
       </div>
     </div>
   );
