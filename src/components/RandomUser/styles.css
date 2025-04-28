@@ -1,0 +1,97 @@
+.random-user-form {
+  width: 730px;
+  height: 433px;
+  margin: 150px auto 0;
+  border-radius: 10px;
+  /* background-color: transparent; */
+  background: linear-gradient(
+    to top,
+    white 303px,
+
+    rgb(241, 240, 240) 130px
+  );
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.random-user-form-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.user-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.user-info-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-title {
+  font-size: 20px;
+  color: grey;
+}
+
+.user-info {
+  font-size: 38px;
+}
+
+.random-user-image-wrapper {
+  border: 1px solid rgb(214, 212, 212);
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+}
+
+.random-user-image {
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+.user-buttons-wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.user-info-button {
+  border: none;
+  width: 40px;
+  height: 32px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.random-user-button {
+  background-color: rgb(73, 166, 233);
+  font-size: 14px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.random-user-button:hover {
+  background-color: rgb(19, 67, 141);
+  color: rgb(73, 166, 233);
+}
+
+.user-info-button.active-button svg {
+  stroke: rgb(73, 166, 233);
+  fill: rgb(73, 166, 233);
+}
+
+.user-info-button:hover svg {
+  stroke: rgb(73, 166, 233);
+  fill: rgb(73, 166, 233);
+}
