@@ -12,6 +12,7 @@ import "./styles.css";
 export const RandomUser = () => {
   const [user, setUser] = useState();
   const [activeButton, setActiveButton] = useState("name");
+  const [loading, setLoading] = useState(false);
 
   const buttonsIcons = {
     name: <IoPersonOutline color="grey" size={30} />,
@@ -33,11 +34,14 @@ export const RandomUser = () => {
 
   const getRandomUserInfo = async () => {
     try {
+      setLoading(true);
       const response = await axios(" https://randomuser.me/api/");
       setUser(response.data.results[0]);
       setActiveButton("name");
     } catch (err) {
       console.error("Произошла ошибка!", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -87,9 +91,13 @@ export const RandomUser = () => {
             ))}
           </div>
         </div>
-        <button className="random-user-button" onClick={getRandomUserInfo}>
-          RANDOM USER
-        </button>
+        {loading ? (
+          <div class="loader"></div>
+        ) : (
+          <button className="random-user-button" onClick={getRandomUserInfo}>
+            RANDOM USER
+          </button>
+        )}
       </div>
     </div>
   );
