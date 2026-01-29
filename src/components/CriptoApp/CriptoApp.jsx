@@ -25,9 +25,9 @@ export const CriptoApp = () => {
 
       {currencyRate && (
         <div>
-          <p>{currencyRate.bitcoin.usd} $</p>
-          <p>{currencyRate.bitcoin.rub} руб</p>
-          <p>{currencyRate.bitcoin.eur} евро</p>
+          <p>{currencyRate.bitcoin.usd * bitcoin} $</p>
+          <p>{currencyRate.bitcoin.rub * bitcoin} руб</p>
+          <p>{currencyRate.bitcoin.eur * bitcoin} евро</p>
         </div>
       )}
     </div>

@@ -1,8 +1,17 @@
 import { useState } from "react";
 import { users } from "./data";
 import "./styles.css";
+import { DropDown } from "./DropDown";
 export const SortingByCity = () => {
   const [activeButton, setActiveButton] = useState(null);
+  const [selectedStatus, setSelectedStatus] = useState([]);
+  const statuses = [
+    { value: "Canceled", label: "сanceled" },
+    { value: "Active", label: "active" },
+    { value: "Expired", label: "expired" },
+    { value: "Active until period end", label: "activeUntilPeriodEnd" },
+  ];
+  const placeholder = "Subscription status";
 
   const getCities = () => {
     return users
@@ -20,6 +29,14 @@ export const SortingByCity = () => {
 
   const getSortedByCityList = (city) => {
     setActiveButton(city);
+  };
+
+  const changeStatusList = (status) => {
+    if (!selectedStatus.includes(status)) {
+      setSelectedStatus([...selectedStatus, status]);
+    } else {
+      setSelectedStatus(selectedStatus.filter((elem) => elem !== status));
+    }
   };
 
   return (
@@ -46,6 +63,13 @@ export const SortingByCity = () => {
           </div>
         ))}
       </div>
+
+      <DropDown
+        selectedStatus={selectedStatus}
+        changeStatusList={changeStatusList}
+        statuses={statuses}
+        placeholder={placeholder}
+      />
     </div>
   );
 };

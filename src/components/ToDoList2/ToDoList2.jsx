@@ -158,7 +158,6 @@ export const ToDoList2 = () => {
           deleteTask={deleteTask}
           changeValueCheckbox={changeValueCheckbox}
           updateText={updateText}
-          å
         />
       ))}
       {loading ? <div class="loader"></div> : ""}

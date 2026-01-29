@@ -7,5 +7,7 @@
 body {
   padding-top: 20px;
   font-size: 14px;
-  /* background-color: #ecfcfa; */
+  height: 100vh;
+  /* background-color: #aa9b9b; */
+  /* background-image: linear-gradient(to top, white 50%, rgb(55, 54, 54) 50%); */
 }

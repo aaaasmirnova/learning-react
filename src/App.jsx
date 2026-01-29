@@ -14,7 +14,7 @@ import { QuestionsApp } from "./components/QuestionsApp/QuestionsApp";
 import { QuestionsApp2 } from "./components/QuestionsApp2/QuestionsApp2";
 import { Counter } from "./components/Counter/Counter";
 import { UserData } from "./components/UserData/UserData";
-import { CounterWithStep } from "./components/CounterWithStep/CounterWithStet";
+import { CounterWithStep } from "./components/CounterWithStep/CounterWithStep";
 import { ViewCard } from "./components/ViewCard/ViewCard";
 import { TrafficLight } from "./components/TrafficLight/TrafficLight";
 import { ConstructorFigures } from "./components/ConstructorFigures/ConstructorFigures";
@@ -22,6 +22,36 @@ import { BodyMassIndex } from "./components/BodyMassIndex/BodyMassIndex";
 import { ShoppingCart } from "./components/ShoppingCart/ShoppingCart";
 import { SliderPictures } from "./components/sliderPictures/sliderPictures";
 import { SortingByCity } from "./components/SortingByCity/SortingByCity";
+import { ToDoList } from "./components/ToDoList/ToDoList";
+import { CreationFigures } from "./components/CreationFigures/CreationFigures";
+import { ToDoListByCategories } from "./components/ToDoListByCategories/ToDoListByCategories";
+import { CheckedUsers } from "./components/CheckedUsers/CheckedUsers";
+import { HomeRentalCalculator } from "./components/HomeRentalCalculator/HomeRentalCalculator";
+import { ExpenseCalculator } from "./components/ExpenseCalculator/ExpenseCalculator";
+import { GuessTheWordGame } from "./components/GuessTheWordGame/GuessTheWordGame";
+import { Quizz } from "./components/Quizz/Quizz";
+import { Form } from "./components/Form/Form";
+import { FilteringShapes } from "./components/FilteringShapes/FilteringShapes";
+import { UsersTable } from "./components/UsersTable/UsersTable";
+import { CoffeeCart } from "./components/CoffeeCart/CoffeeCart";
+import { Pagination2 } from "./components/Pagination2/Pagination2";
+import { Posts } from "./components/Posts/Posts";
+import { Test } from "./components/Test/Test";
+import { RandomUser } from "./components/RandomUser/RandomUser";
+import { Weather } from "./components/Weather/Weather";
+import { CriptoApp } from "./components/CriptoApp/CriptoApp";
+import { ToDoList2 } from "./components/ToDoList2/ToDoList2";
+import { UsersTableSorting } from "./components/UsersTableSorting/UsersTableSorting";
+import { ImageSearch } from "./components/ImageSearch/ImageSearch";
+import { InputWithCustomHook } from "./components/InputWithCustomHook/InputWithCustomHook";
+import { CounterWithCustomHook } from "./components/CounterWithCustomHook/CounterWithCustomHook";
+import { ToDoListWithCustomHook } from "./components/ToDoWithCustomHook/ToDoListWithCustomHook";
+import { GuessTheWord } from "./components/GuessTheWord/GuessTheWord";
+import { InputWithUseRef } from "./components/InputWithUseRef/InputWithUseRef";
+import { CounterWithUsePrevious } from "./components/CounterWithUsePrevious/CounterWithUsePrevious";
+import { Stopwatch } from "./components/Stopwatch/Stopwatch";
+import { PomadoroTimer } from "./components/PomadoroTimer/PomadoroTimer";
+import { TrafficLight2 } from "./components/TrafficLight2/TrafficLight2";
 
 function App() {
   return (
@@ -60,6 +90,36 @@ function App() {
       {/* <ShoppingCart /> */}
       {/* <SliderPictures isLoop={false} /> */}
       <SortingByCity />
+      {/* <ToDoList /> */}
+      {/* <CreationFigures /> */}
+      {/* <ToDoListByCategories /> */}
+      {/* <CheckedUsers /> */}
+      {/* <HomeRentalCalculator /> */}
+      {/* <ExpenseCalculator /> */}
+      {/* <GuessTheWordGame /> */}
+      {/* <Quizz /> */}
+      {/* <Form /> */}
+      {/* <FilteringShapes /> */}
+      {/* <UsersTable /> */}
+      {/* <CoffeeCart /> */}
+      {/* <Pagination2 total={10} /> */}
+      {/* <Posts /> */}
+      {/* <RandomUser /> */}
+      {/* <Weather /> */}
+      {/* <CriptoApp /> */}
+      {/* <ToDoList2 /> */}
+      {/* <UsersTableSorting /> */}
+      {/* <ImageSearch /> */}
+      {/* <InputWithCustomHook /> */}
+      {/* <CounterWithCustomHook /> */}
+      {/* <ToDoListWithCustomHook /> */}
+      {/* <GuessTheWord /> */}
+      {/* <InputWithUseRef /> */}
+      {/* <CounterWithUsePrevious /> */}
+      {/* <Stopwatch /> */}
+      {/* <PomadoroTimer /> */}
+      {/* <TrafficLight2 /> */}
+      {/* <TrafficLight2 layout="horizontal" /> */}
     </>
   );
 }

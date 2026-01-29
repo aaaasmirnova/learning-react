@@ -63,6 +63,8 @@ export const ShoppingCart = () => {
     }
   };
 
+  console.log(cart);
+
   return (
     <div className="pizza-wrapper">
       <div className="pizza-catalog">

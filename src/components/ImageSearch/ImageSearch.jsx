@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./styles.css";
+import { useDebounce } from "../../hooks/useDebounce";
 
 const values = ["Nature", "Birds", "Cats", "Shoes"];
 
 export const ImageSearch = () => {
-  const [value, setValue] = useState("");
-  const [searchValue, setSearhValue] = useState("coffee");
+  const [inputValue, setInputValue] = useState("");
+  const [valueByButton, setValueByButton] = useState("coffee");
+  const debouncedSearchTerm = useDebounce(inputValue, 1000);
   const [imagesList, setImagesList] = useState([]);
   const [page, setPage] = useState(1);
   const API_URL = "https://api.unsplash.com/search/photos";
@@ -15,23 +17,34 @@ export const ImageSearch = () => {
 
   useEffect(() => {
     getImages();
-  }, [searchValue, page]);
+  }, [debouncedSearchTerm, valueByButton, page]);
 
   const getImages = async () => {
     try {
       const response = await axios.get(
-        `${API_URL}?query=${searchValue}&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${API_KEY}`
+        `${API_URL}?query=${
+          debouncedSearchTerm || valueByButton
+        }&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${API_KEY}`
       );
+      // const response = await axios.get(
+      //   `${API_URL}?query=${
+      //     debouncedSearchTerm || searchValue
+      //   }&page=${page}&per_page=${IMAGES_PER_PAGE}&client_id=${API_KEY}`
+      // );
       setImagesList(response.data.results);
     } catch (err) {
       console.error("Произошла ошибка!", err);
     }
   };
 
+  // useEffect(() => {
+  //   getImages();
+  // }, [debouncedSearchTerm, searchValue, page]);
+
   const changeSearchValue = (event) => {
-    setValue(event.target.value);
+    setInputValue(event.target.value);
     if (event.target.value.trim() === "") return;
-    setSearhValue(event.target.value);
+    // setSearhValue(event.target.value);
     setPage(1);
   };
 
@@ -45,18 +58,18 @@ export const ImageSearch = () => {
   };
 
   const getImagesByButton = (elem) => {
-    setSearhValue(elem);
-    getImages();
+    setValueByButton(elem);
+    setInputValue("");
     setPage(1);
   };
 
-  console.log(searchValue);
+  console.log(valueByButton);
 
   return (
     <div className="image-search-form-wrapper">
       <div className="image-search-wrapper">
         <h1 className="image-search-title">Image Search</h1>
-        <input type="text" value={value} onChange={changeSearchValue} />
+        <input type="text" value={inputValue} onChange={changeSearchValue} />
         <div className="search-image-button-wrapper">
           {values.map((elem, index) => (
             <button

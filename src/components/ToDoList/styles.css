@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  width: 500px;
+  width: 800px;
   background-color: #aa9b9b;
 }
 
@@ -44,7 +44,7 @@
 
 .task-checkbox-wrapper {
   display: flex;
-  width: 350px;
+  width: 500px;
 }
 
 .task-button-wrapper {
