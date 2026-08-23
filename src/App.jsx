@@ -52,10 +52,38 @@ import { CounterWithUsePrevious } from "./components/CounterWithUsePrevious/Coun
 import { Stopwatch } from "./components/Stopwatch/Stopwatch";
 import { PomadoroTimer } from "./components/PomadoroTimer/PomadoroTimer";
 import { TrafficLight2 } from "./components/TrafficLight2/TrafficLight2";
+import { ToastContainer } from "react-toastify";
+// import { TanstackExample } from "./components/TanstackExample/TanstackToDoList";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { TanstackToDoList } from "./components/TanstackExample/TanstackToDoList";
+import { Home } from "./components/TestConstructor/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { TestPassing } from "./components/TestConstructor/TestPassing";
+import { TestEditor } from "./components/TestConstructor/TestEditor";
+import { TestResult } from "./components/TestConstructor/TestResult";
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000,  // 5 минут данные считаются свежими
+      retry: 3,                   // 3 попытки при ошибке
+      refetchOnWindowFocus: false, // не обновлять при фокусе вкладки
+    },
+  },
+});
 function App() {
+
   return (
     <>
+    {/* <ToastContainer 
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="light"/> */}
       {/* <Figures />
       <Users />
       <Vacancies />
@@ -89,7 +117,7 @@ function App() {
       {/* <BodyMassIndex /> */}
       {/* <ShoppingCart /> */}
       {/* <SliderPictures isLoop={false} /> */}
-      <SortingByCity />
+      {/* <SortingByCity /> */}
       {/* <ToDoList /> */}
       {/* <CreationFigures /> */}
       {/* <ToDoListByCategories /> */}
@@ -120,6 +148,19 @@ function App() {
       {/* <PomadoroTimer /> */}
       {/* <TrafficLight2 /> */}
       {/* <TrafficLight2 layout="horizontal" /> */}
+       <QueryClientProvider client={queryClient}>
+        {/* <TanstackToDoList/> */}
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/test/:id" element={<TestPassing />} />
+          <Route path="/result/:id" element={<TestResult />} />
+          <Route path="/editor/:id" element={<TestEditor />} /> 
+        </Routes>
+      </BrowserRouter>
+      </QueryClientProvider> */
+     
+      
     </>
   );
 }

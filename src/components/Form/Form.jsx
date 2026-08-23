@@ -1,14 +1,27 @@
 import { useState } from "react";
 import { steps } from "./data";
 import { IoCheckmarkCircle } from "react-icons/io5";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./styles.css";
 
 export const Form = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [info, setInfo] = useState({});
   const [doneButtonActive, setDoneButtonActive] = useState(false);
+
   const showNextForm = (e) => {
     e.preventDefault();
+
+    // Валидация: проверяем, заполнены ли все поля на текущем шаге
+    const currentFields = steps[activeStep];
+    const allFilled = currentFields.every(field => info[field]?.trim());
+    
+    if (!allFilled) {
+      toast.warning('⚠️ Пожалуйста, заполните все поля перед переходом');
+      return;
+    }
+
     const newStep = activeStep + 1;
     setActiveStep(newStep);
     const newInfo = { ...info };
@@ -18,11 +31,15 @@ export const Form = () => {
       }
     }
     setInfo(newInfo);
+
+    // Уведомление о переходе
+    toast.info(`📋 Шаг ${newStep + 1} из ${steps.length}`);
   };
 
   const showPreviousForm = (e) => {
     // e.preventDefault();
     setActiveStep(activeStep - 1);
+    toast.info(`⬅️ Шаг ${activeStep} из ${steps.length}`);
   };
 
   const changeInfo = (event, elem) => {
@@ -30,17 +47,39 @@ export const Form = () => {
   };
 
   const completeForm = () => {
-    setDoneButtonActive(true);
+   // ⬇️⬇️⬇️ ВАЛИДАЦИЯ СНАЧАЛА ⬇️⬇️⬇️
+    const currentFields = steps[activeStep];
+    const allFilled = currentFields.every(field => info[field]?.trim());
+    
+    if (!allFilled) {
+      toast.warning('⚠️ Пожалуйста, заполните все поля');
+      return;
+    }
 
-    console.log(info);
+    // ✅ СРАЗУ показываем экран успеха
+    setDoneButtonActive(true);
+    console.log('Данные формы:', info);
+
+    // ⏳ Уведомление об отправке (тост НЕ БЛОКИРУЕТ интерфейс)
+    const toastId = toast.loading('⏳ Отправка данных...');
+
+    // Имитация отправки на сервер (асинхронно, не блокирует UI)
+    setTimeout(() => {
+      toast.update(toastId, {
+        render: '✅ Форма успешно отправлена!',
+        type: 'success',
+        isLoading: false,
+        autoClose: 3000,
+      });
+    }, 1500);
   };
 
   if (doneButtonActive) {
     return (
-      <div>
-        <p>
-          {" "}
-          <IoCheckmarkCircle color="violet" />
+      <div style={{ textAlign: 'center', padding: '40px' }}>
+        <p style={{ fontSize: '24px' }}>
+          <IoCheckmarkCircle color="violet" size={48} />
+          <br />
           You have successfully completed the process.
         </p>
       </div>

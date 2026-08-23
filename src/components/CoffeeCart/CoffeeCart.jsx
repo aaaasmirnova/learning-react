@@ -4,6 +4,8 @@ import "./styles.css";
 import { LuPlus } from "react-icons/lu";
 import { FiMinus } from "react-icons/fi";
 import { CoffeeItem } from "./CoffeeItem";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CoffeeCart = () => {
   const [cart, setCart] = useState([]);
@@ -14,6 +16,8 @@ export const CoffeeCart = () => {
         coffee.id === id ? { ...coffee, count: coffee.count + 1 } : coffee
       )
     );
+      // ✅ Уведомление об увеличении количества
+    toast.info('➕ Количество увеличено');
   };
 
   const decreaseCount = (id, count) => {
@@ -25,7 +29,10 @@ export const CoffeeCart = () => {
       );
     } else {
       setCart(cart.filter((coffee) => coffee.id !== id));
+        // ✅ Уведомление об удалении товара из корзины
+      toast.warning('🗑️ Товар удалён из корзины');
     }
+     toast.info('➖ Количество уменьшено');
   };
 
   const getTotalCartPrice = () => {

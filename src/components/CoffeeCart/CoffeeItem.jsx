@@ -3,16 +3,20 @@ import { syrops } from "./data";
 import { LuPlus } from "react-icons/lu";
 import { FiMinus } from "react-icons/fi";
 import uuid from "react-uuid";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export const CoffeeItem = ({
   item,
   cart,
   setCart,
   increaseCount,
   decreaseCount,
+  defaultSyrop = null,   
+  defaultSugar = false, 
 }) => {
   const [activeVolume, setActiveVolume] = useState(item.prices[0].size);
-  const [activeSyrop, setActiveSyrop] = useState(null);
-  const [sugar, setSugar] = useState(false);
+  const [activeSyrop, setActiveSyrop] = useState(defaultSyrop);
+  const [sugar, setSugar] = useState(defaultSugar);
 
   const changeActiveVolume = (event) => {
     setActiveVolume(Number(event.target.value));
@@ -20,10 +24,18 @@ export const CoffeeItem = ({
 
   const chooseSyrop = (syrop) => {
     setActiveSyrop(syrop);
+    // ✅ Уведомление о выборе сиропа
+    if (syrop) {
+      toast.info(`🍯 Добавлен сироп "${syrop.title}"`);
+    } else {
+      toast.info('🍯 Сироп убран');
+    }
   };
 
   const changeSugar = () => {
     setSugar(!sugar);
+    // ✅ Уведомление о сахаре
+    toast.info(sugar ? '🍬 Сахар добавлен' : '🍬 Без сахара');
   };
 
   const getSameCoffee = () => {
